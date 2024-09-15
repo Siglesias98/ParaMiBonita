@@ -1,0 +1,113 @@
+/* Estilos generales */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: black; /* Fondo negro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Sección de inicio */
+.contenedor {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.titulo {
+    font-size: 80px;
+    color: gold;
+    text-shadow: 0 0 10px yellow, 0 0 20px yellow, 0 0 30px yellow, 0 0 40px yellow; /* Efecto de brillo neón */
+    animation: parpadeo 1.5s infinite alternate; /* Efecto de parpadeo */
+}
+
+@keyframes parpadeo {
+    0% { opacity: 1; }
+    100% { opacity: 0.7; }
+}
+
+.boton {
+    margin-top: 20px;
+    padding: 15px 30px;
+    font-size: 20px;
+    background-color: yellow;
+    color: black;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    z-index: 1;
+    transition: transform 0.3s ease;
+}
+
+.boton:hover {
+    transform: scale(1.1);
+}
+
+/* Sección de la animación de la flor */
+.animacion-flor {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black; /* Fondo negro */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none; /* Inicialmente oculta */
+}
+
+.flor {
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background-color: yellow;
+    position: absolute;
+    bottom: 50px; /* Ajusta según sea necesario */
+    left: 50%;
+    transform: translateX(-50%);
+    animation: crecer 5s ease-out forwards;
+}
+
+@keyframes crecer {
+    0% {
+        width: 0;
+        height: 0;
+        opacity: 0;
+    }
+    100% {
+        width: 100px;
+        height: 100px;
+        opacity: 1;
+    }
+}
+
+.mensaje {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 20px;
+    font-family: Arial, sans-serif;
+    opacity: 0;
+    animation: aparecer 5s ease-out forwards;
+}
+
+@keyframes aparecer {
+    0% {
+        opacity: 0;
+        transform: translateX(-50%) translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+}
