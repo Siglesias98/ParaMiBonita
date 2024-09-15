@@ -103,6 +103,39 @@ body, html {
     transform: translate(-50%, -50%);
 }
 
+/* Tallo de la flor */
+.tallo {
+    position: absolute;
+    width: 20px;
+    height: 150px;
+    background-color: brown;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Hojas de la flor */
+.hoja {
+    position: absolute;
+    width: 100px;
+    height: 60px;
+    background-color: green;
+    border-radius: 50%;
+    box-shadow: 0 0 10px green;
+}
+
+.hoja1 {
+    top: 50px;
+    left: -50px;
+    transform: rotate(-45deg);
+}
+
+.hoja2 {
+    top: 50px;
+    right: -50px;
+    transform: rotate(45deg);
+}
+
 /* Mensaje */
 .mensaje {
     position: absolute;
